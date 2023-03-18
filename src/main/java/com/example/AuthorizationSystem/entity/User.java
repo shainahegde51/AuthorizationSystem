@@ -55,7 +55,7 @@ public class User {
 
 
     //Here we are adding many-to-many relationship between user and role entity
-    //And joining these two tables (user,role)
+    //And joining these two tables (user,role) to form user_role table where we get data related to the user name and his role
     @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinTable(name="USER_ROLE",
             joinColumns = {@JoinColumn(name= "USER_ID")},
